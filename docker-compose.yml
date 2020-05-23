@@ -4,5 +4,8 @@ services:
         build: .
         ports:
             - "23423:23423"
+            - "23523:23523"
+            - "23424:23424"
+            - "23524:23524"
     redis:
         image: "redis:alpine"
