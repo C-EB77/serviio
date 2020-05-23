@@ -1,7 +1,5 @@
 FROM    alpine:latest
 
-MAINTAINER  "SnD Solutions Fitch <fitch@outlook.be>"
-
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION=1.0
@@ -17,7 +15,7 @@ LABEL   org.label-schema.build-date=$BUILD_DATE \
         org.label-schema.vendor="SnD Solutions" \
         org.label-schema.version=$VERSION \
         org.label-schema.schema-version="1.0" \
-        maintainer="SnD Solutions Fitch"
+        maintainer="SnD Solutions Fitch <fitch@outlook.be>"
 
 EXPOSE 1900/udp
 EXPOSE 8895/tcp
