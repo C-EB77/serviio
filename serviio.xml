@@ -99,6 +99,6 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:7878]/</WebUI>
+  <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/serviio_93579.png</Icon>
 </Containers>
