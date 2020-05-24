@@ -21,6 +21,7 @@ ENV JAVA_HOME="/usr"
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/main" >> /etc/apk/repositories; \
+    echo "http://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     apk update && apk upgrade && apk add --no-cache --update \
@@ -52,7 +53,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/
 		x264-libs \
 		x264 \
 		x265 \
-		# jasper-dev \
+		jasper-dev \
                 libass-dev \
 		gnutls-dev \
 		libwebp-dev \
