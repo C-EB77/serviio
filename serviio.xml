@@ -95,5 +95,5 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:7878]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/radarr-icon.png</Icon>
+  <Icon>https://serviio.org/images/serviio.png</Icon>
 </Containers>
