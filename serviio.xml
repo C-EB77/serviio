@@ -95,5 +95,5 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:7878]/</WebUI>
-  <Icon>https://serviio.org/images/serviio.png</Icon>
+  <Icon>https://forum.serviio.org/styles/ca_black/imageset/new-serviio-logo.png</Icon>
 </Containers>
