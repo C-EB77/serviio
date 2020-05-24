@@ -56,7 +56,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repos
 		x264 \
 		x265 \
 		jasper-dev \
-        libass-dev \
+                libass-dev \
 		gnutls-dev \
 		libwebp-dev \
 		lame-dev \
@@ -80,7 +80,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repos
 		libogg-dev \
 		libva-dev \
 		libvorbis-dev \
-        libvpx-dev \
+                libvpx-dev \
 		libx11 \
 		libxau \
 		libxcb \
@@ -108,7 +108,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repos
 		x265-dev \
 		xvidcore-dev \
 		yasm-dev \
-        zlib-dev && \
+                zlib-dev && \
 	DIR=$(mktemp -d) && cd ${DIR} && \
 	curl -s http://ffmpeg.org/releases/ffmpeg-${FFMPEG_VERSION}.tar.gz | tar zxf - -C . && \
 	cd ffmpeg-${FFMPEG_VERSION} && \
