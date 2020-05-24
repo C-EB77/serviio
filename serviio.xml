@@ -93,6 +93,11 @@
       <ContainerDir>/opt/serviio/log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/transcode</HostDir>
+      <ContainerDir>/opt/serviio/transcode</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:7878]/</WebUI>
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/serviio_93579.png</Icon>
