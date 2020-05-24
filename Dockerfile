@@ -19,10 +19,9 @@ LABEL   org.label-schema.build-date=$BUILD_DATE \
 
 ENV JAVA_HOME="/usr"
 
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/3.11/community" >> /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/3.11/main" >> /etc/apk/repositories; \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repositories; \
+    echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/main" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     apk update && apk upgrade && apk add --no-cache --update \
 		alsa-lib \
@@ -53,7 +52,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/3.11/community" >> /etc/apk/repos
 		x264-libs \
 		x264 \
 		x265 \
-		jasper-dev \
+		# jasper-dev \
                 libass-dev \
 		gnutls-dev \
 		libwebp-dev \
@@ -106,7 +105,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/3.11/community" >> /etc/apk/repos
 		x265-dev \
 		xvidcore-dev \
 		yasm-dev \
-        zlib-dev && \
+                zlib-dev && \
 	DIR=$(mktemp -d) && cd ${DIR} && \
 	curl -s http://ffmpeg.org/releases/ffmpeg-${FFMPEG_VERSION}.tar.gz | tar zxf - -C . && \
 	cd ffmpeg-${FFMPEG_VERSION} && \
@@ -147,7 +146,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/3.11/community" >> /etc/apk/repos
 	install -D -m755 tools/qt-faststart /usr/bin/qt-faststart && \
 	make distclean && \
 	cd ${DIR} && \
-	wget http://www.cybercom.net/~dcoffin/dcraw/dcraw.c && \
+	wget https://www.dechifro.org/dcraw/dcraw.c && \
 	gcc -o dcraw -O4 dcraw.c -lm -ljasper -ljpeg -llcms2 && \
 	cp dcraw /usr/bin/dcraw && \
 	chmod +x /usr/bin/dcraw  && \
