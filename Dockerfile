@@ -19,8 +19,8 @@ LABEL   org.label-schema.build-date=$BUILD_DATE \
 
 ENV JAVA_HOME="/usr"
 
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/3.12/community" >> /etc/apk/repositories; \
-    echo "http://dl-cdn.alpinelinux.org/alpine/3.12/main" >> /etc/apk/repositories; \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/3.11/community" >> /etc/apk/repositories; \
+    echo "http://dl-cdn.alpinelinux.org/alpine/3.11/main" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories; \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
