@@ -55,7 +55,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/
 		x264 \
 		x265 \
 		jasper-dev \
-        libass-dev \
+                libass-dev \
 		gnutls-dev \
 		libwebp-dev \
 		lame-dev \
@@ -79,7 +79,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/
 		libogg-dev \
 		libva-dev \
 		libvorbis-dev \
-        libvpx-dev \
+                libvpx-dev \
 		libx11 \
 		libxau \
 		libxcb \
