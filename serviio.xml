@@ -71,7 +71,7 @@
     <Volume>
       <HostDir>/etc/localtime</HostDir>
       <ContainerDir>/etc/localtime</ContainerDir>
-      <Mode>rw</Mode>
+      <Mode>ro</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/serviio</HostDir>
@@ -90,7 +90,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/serviio/log</HostDir>
-      <ContainerDir>/opt/serviio/log</ContainerDir>
+      <ContainerDir>/opt/serviio/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>

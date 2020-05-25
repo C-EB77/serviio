@@ -2,9 +2,13 @@ FROM    alpine:latest
 
 ARG BUILD_DATE
 ARG VCS_REF
-ARG VERSION=1.0
-ARG FFMPEG_VERSION=4.2
-ARG SERVIIO_VERSION=2.1
+ARG VERSION
+ARG FFMPEG_VERSION
+ARG SERVIIO_VERSION
+
+RUN echo "Version: $VERSION"
+RUN echo "Version: $FFMPEG_VERSION"
+RUN echo "Version: $SERVIIO_VERSION"
 
 LABEL   org.label-schema.build-date=$BUILD_DATE \
         org.label-schema.name="DLNA Serviio Container" \
@@ -163,7 +167,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/
 	apk del --purge build-dependencies && \
 	rm -rf /var/cache/apk/*
 	
-VOLUME [ "/opt/serviio/config", "/opt/serviio/library",  "/opt/serviio/log", "/opt/serviio/plugins", "/media/serviio"]
+VOLUME [ "/opt/serviio/config", "/opt/serviio/library",  "/opt/serviio/logs", "/opt/serviio/plugins", "/media/serviio"]
 
 EXPOSE 1900/udp
 EXPOSE 8895/tcp
@@ -176,4 +180,4 @@ EXPOSE 23424/tcp
 # HTTPS/1.1 /cds /mediabrowser
 EXPOSE 23524/tcp
 
-CMD tail -f /opt/serviio/log/serviio.log & /opt/serviio/bin/serviio.sh
+CMD tail -f /opt/serviio/logs/serviio.log & /opt/serviio/bin/serviio.sh

@@ -1,8 +1,14 @@
 version: '3'
-services: 
+services:
     serviio:
-        build: .
-        ports:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+            args:
+                VERSION: "1.0"
+                FFMPEG_VERSION: "4.2"
+                SERVIIO_VERSION: "2.1"
+        ports:            
             - "1900:1900/udp"
             - "8895:8895/tcp"
             - "23423:23423/tcp"
