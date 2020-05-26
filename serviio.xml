@@ -89,11 +89,6 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/serviio/log</HostDir>
-      <ContainerDir>/opt/serviio/logs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/mnt/user/transcode</HostDir>
       <ContainerDir>/opt/serviio/transcode</ContainerDir>
       <Mode>rw</Mode>
