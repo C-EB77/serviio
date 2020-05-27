@@ -3,23 +3,25 @@ services:
     serviio:
         build:
             context: .
-            cache_from:
-                - alpine:latest
             dockerfile: Dockerfile
             args:
                 BUILD_DATE: "date -u +\"%Y-%m-%dT%H:%M:%SZ\""
                 VCS_REF: "git rev-parse --short"
-                VERSION: "1.0"
+                VERSION: "2.1"
                 FFMPEG_VERSION: "4.2"
                 SERVIIO_VERSION: "2.1"
+        image: sndsolutions/serviio
+        network_mode: host
+        container_name: serviio
         ports:
-            - "1900/udp"
-            - "8895/tcp"
-            - "23423/tcp"
-            - "23424/tcp"
-            - "23523/tcp"
-            - "23524/tcp"
+            - "1900:1900/udp"
+            - "8895:8895/tcp"
+            - "23423:23423/tcp"
+            - "23424:23424/tcp"
+            - "23523:23523/tcp"
+            - "23524:23524/tcp"
         volumes:
-            - "/srv/docker/serviio/library:/opt/serviio/library"
-            - "/srv/docker/serviio/plugins:/opt/serviio/plugins"
-            - "/srv/docker/serviio/log:/opt/serviio/log"
+            - "/mnt/user/appdata/serviio/library:/opt/serviio/library"
+            - "/mnt/user/appdata/serviio/plugins:/opt/serviio/plugins"
+            - "/mnt/user/appdata/serviio/log:/opt/serviio/log"
+            - "/mnt/user/appdata/serviio/media:/media/serviio"

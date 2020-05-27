@@ -1,99 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Containers>
-  <TemplateURL>https://github.com/sndsolutions/serviio/serviio.xml</TemplateURL>
+<Container version="2">
+  <Name>serviio</Name>
   <Beta>False</Beta>
   <Category>Media Servers</Category>
   <Name>serviio</Name>
   <Description>
     [b][u][span style='color: #E80000;']Description[/span][/u][/b][br]
-    This is a docker for serviio.
+    This is a docker container for serviio DLNA media server.[br]
+    To add your libray add a new path configuration 
   </Description>
   <Overview>
-    This is a docker for serviio.
+    This is a docker container for serviio DLNA media server.
   </Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=55549.0</Support>
+  <Support>http://lime-technology.com/forum/index.php?topic=40654.0</Support>
   <Registry>https://registry.hub.docker.com/r/sndsolutions/serviio/</Registry>
   <GitHub>https://github.com/sndsolutions/serviio</GitHub>
   <Repository>sndsolutions/serviio</Repository>
   <Project>https://github.com/sndsolutions/serviio</Project>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Networking>
-    <Mode>host</Mode>
-    <Publish>
-      <Port>
-        <HostPort>1900</HostPort>
-        <ContainerPort>1900</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8895</HostPort>
-        <ContainerPort>8895</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>23423</HostPort>
-        <ContainerPort>23423</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>23424</HostPort>
-        <ContainerPort>23424</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>23523</HostPort>
-        <ContainerPort>23523</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>23524</HostPort>
-        <ContainerPort>23524</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Name>UMASK</Name>
-      <Value>000</Value>
-    </Variable>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>100</Value>
-    </Variable>
-  </Environment>
-  <Data>
-    <Volume>
-      <HostDir>/etc/localtime</HostDir>
-      <ContainerDir>/etc/localtime</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/serviio</HostDir>
-      <ContainerDir>/opt/serviio/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/serviio/library</HostDir>
-      <ContainerDir>/opt/serviio/library</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/serviio/plugins</HostDir>
-      <ContainerDir>/opt/serviio/plugins</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/transcode</HostDir>
-      <ContainerDir>/opt/serviio/transcode</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
+  <Network>host</Network>
+  <Config Type="Port" Name="serviio udp" Target="1900" Default="1900" Mode="udp" Description="The UDP port for serviio." Display="always" Required="true">1900</Config>
+  <Config Type="Port" Name="serviio tcp" Target="8895" Default="8895" Mode="tcp" Description="The TCP port for serviio." Display="always" Required="true">8895</Config>
+  <Config Type="Port" Name="serviio Rest Service and Web UI" Target="23423" Default="23423" Mode="tcp" Description="The TCP port for the Rest service and Web UI of serviio." Display="always" Required="true">23423</Config>
+  <Config Type="Port" Name="serviio Mediabrowser" Target="23424" Default="23424" Mode="tcp" Description="The TCP port for the mediabrowser of serviio." Display="always" Required="true">23424</Config>
+  <Config Type="Port" Name="serviio Rest Service and Web UI securised" Target="23523" Default="23523" Mode="tcp" Description="The securised TCP port for the Rest service and Web UI of serviio." Display="always" Required="true">23523</Config>
+  <Config Type="Port" Name="serviio Mediabrowser securised" Target="23524" Default="23524" Mode="tcp" Description="The securised TCP port for the mediabrowser of serviio." Display="always" Required="true">23524</Config>
+  <Config Type="Path" Name="serviio Local time" Target="/ect/localtime" Default="/etc/localtime" Mode="ro" Description="Local time" Required="true">/etc/localtime</Config>
+  <Config Type="Path" Name="serviio config directory" Target="/opt/serviio/config" Default="/mnt/user/appdata/serviio" Mode="rw" Description="This is where servvio will store it configuration." Required="true">/mnt/user/appdata/serviio</Config>
+  <Config Type="Path" Name="serviio library directory" Target="/opt/serviio/library" Default="/mnt/user/appdata/serviio/library" Mode="rw" Description="This is where servvio will store it library." Required="true">/mnt/user/appdata/serviio/library</Config>
+  <Config Type="Path" Name="serviio plugins directory" Target="/opt/serviio/plugins" Default="/mnt/user/appdata/serviio/plugins" Mode="rw" Description="This is where servvio will store its plugins." Required="true">/mnt/user/appdata/serviio/plugins</Config>
+  <Config Type="Path" Name="serviio trasncode directory" Target="/opt/serviio/plugins" Default="/mnt/user/transcode" Mode="rw" Description="This is where servvio will store its transocded files." Required="true">/mnt/user/transcode</Config>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/serviio_93579.png</Icon>
-</Containers>
+</Container>
