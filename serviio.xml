@@ -28,7 +28,7 @@
   <Config Type="Port" Name="serviio Mediabrowser securised" Target="23524" Default="23524" Mode="tcp" Description="The securised TCP port for the mediabrowser of serviio." Display="always" Required="true">23524</Config>
   <Config Type="Path" Name="serviio Local time" Target="/ect/localtime" Default="/etc/localtime" Mode="ro" Description="Local time" Required="true">/etc/localtime</Config>  
   <Config Type="Path" Name="serviio library directory" Target="/opt/serviio/library" Default="/mnt/user/appdata/serviio/library" Mode="rw" Description="This is where servvio will store it library." Required="true">/mnt/user/appdata/serviio/library</Config>
-  <Config Type="Path" Name="serviio trasncode directory" Target="/opt/serviio/transcode" Default="/mnt/user/transcode" Mode="rw" Description="This is where servvio will store its transocded files." Required="true">/mnt/user/transcode</Config>
+  <Config Type="Path" Name="serviio trasncode directory" Target="/tmp" Default="/mnt/user/transcode" Mode="rw" Description="This is where servvio will store its transocded files." Required="true">/mnt/user/transcode</Config>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/serviio_93579.png</Icon>
 </Container>

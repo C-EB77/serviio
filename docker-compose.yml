@@ -10,7 +10,7 @@ services:
                 VERSION: "2.1"
                 FFMPEG_VERSION: "4.2"
                 SERVIIO_VERSION: "2.1"
-        image: sndsolutions/serviio
+        image: sndsolutions/serviio:2.1
         network_mode: host
         container_name: serviio
         ports:
@@ -24,4 +24,5 @@ services:
             - "/mnt/user/appdata/serviio/library:/opt/serviio/library"
             - "/mnt/user/appdata/serviio/plugins:/opt/serviio/plugins"
             - "/mnt/user/appdata/serviio/log:/opt/serviio/log"
+            - "/mnt/user/transcode:/tmp"
             - "/mnt/user/appdata/serviio/media:/media/serviio"
