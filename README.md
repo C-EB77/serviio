@@ -2,7 +2,7 @@
 
 [![](http://serviio.org/images/serviio.png)](http://serviio.org/) 
 
-[![](https://images.microbadger.com/badges/image/sndsolutions/serviio.svg)](https://microbadger.com/images/sndsolutions/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/sndsolutions/serviio.svg)](https://hub.docker.com/r/sndsolutions/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/sndsolutions/serviio.svg)](https://hub.docker.com/r/sndsolutions/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/sndsolutions/docker-serviio.svg)](https://github.com/sndsolutions/docker-serviio) [![Docker Build Status](https://img.shields.io/docker/build/sndsolutions/serviio.svg)](https://hub.docker.com/r/sndsolutions/serviio/)
+[![](https://images.microbadger.com/badges/image/sndsolutions/serviio.svg)](https://microbadger.com/images/sndsolutions/serviio) [![Docker Pulls](https://img.shields.io/docker/pulls/sndsolutions/serviio.svg)](https://hub.docker.com/r/sndsolutions/serviio/) [![Docker Stars](https://img.shields.io/docker/stars/sndsolutions/serviio.svg)](https://hub.docker.com/r/sndsolutions/serviio/) [![GitHub last commit](https://img.shields.io/github/last-commit/sndsolutions/docker-serviio.svg)](https://github.com/sndsolutions/serviio) [![Docker Build Status](https://img.shields.io/docker/build/sndsolutions/serviio.svg)](https://hub.docker.com/r/sndsolutions/serviio/)
   
 Link on docker hub: [sndsolutions/serviio](https://hub.docker.com/r/sndsolutions/serviio/)
 
