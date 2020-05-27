@@ -1,4 +1,4 @@
-# docker-serviio
+# serviio
 
 [![](http://serviio.org/images/serviio.png)](http://serviio.org/) 
 
