@@ -7,10 +7,19 @@
   <Description>
     [b][u][span style='color: #E80000;']Description[/span][/u][/b][br]
     This is a docker container for serviio DLNA media server.[br]
-    To add your libray add a new path configuration 
+    To add your library, follows this 2 steps:[br]
+    - Add new Path with your host path and the desired container path.[br]
+    example: container path: /media/movies, host path: /mnt/user/movies, access mode: read only.[br]
+    - In serviio, add a shared folder with the path of your container path created above.[br]
+    example: media type: video, folder: /media/movies, display name: Movies.
   </Description>
   <Overview>
-    This is a docker container for serviio DLNA media server.
+    This is a docker container for serviio DLNA media server.[br]
+    To add your library, follows this 2 steps:[br]
+    - Add new Path with your host path and the desired container path.[br]
+    example: container path: /media/movies, host path: /mnt/user/movies, access mode: read only.[br]
+    - In serviio, add a shared folder with the path of your container path created above.[br]
+    example: media type: video, folder: /media/movies, display name: Movies.
   </Overview>
   <Support>http://lime-technology.com/forum/index.php?topic=40654.0</Support>
   <Registry>https://registry.hub.docker.com/r/sndsolutions/serviio/</Registry>
