@@ -40,7 +40,7 @@ Link on github: [sndsolutions/docker-serviio](https://github.com/sndsolutions/do
 ### Using
  - **Step 1:**   In Unraid add the Url https://github.com/sndsolutions/serviio/blob/master/serviio.xml in the "Template repositories" in the docker section.
  - **Step 2:**   Add a container and select serviio as template.
- - **Step 3:**   Add new Path with your host path and the desired container path.
+ - **Step 3:**   Add new Path with your host path and the desired container path.[br]
                  example: container path: /media/movies, host path: /mnt/user/movies, access mode: read only.
- - **Step 4:**   Laucnh the web UI of serviio and add a shared folder with the path of your container path created above.
+ - **Step 4:**   Laucnh the web UI of serviio and add a shared folder with the path of your container path created above.[br]
                  example: media type: video, folder: /media/movies, display name: Movies.
