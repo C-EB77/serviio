@@ -6,7 +6,7 @@
   
 Link on docker hub: [sndsolutions/serviio](https://hub.docker.com/r/sndsolutions/serviio/)
 
-Link on github: [sndsolutions/docker-serviio](https://github.com/sndsolutions/docker-serviio)
+Link on github: [sndsolutions/serviio](https://github.com/sndsolutions/serviio)
 
 ### Build Args
 
