@@ -34,7 +34,7 @@ Link on github: [sndsolutions/serviio](https://github.com/sndsolutions/serviio)
  - **/media/serviio**       - put media content here and add in serviio gui this path
 
 
-### Container Changelog (dd.mm.yy)
+### Container Changelog (dd.mm.yyyy)
  - **27.05.2020** - Added Serviio v2.1 and alpine v3.10.
 
 ### Using
